@@ -1,7 +1,7 @@
 Self-graded Assignment 3 Checklist
 
 Netlify Hosting Link: https://radiant-travesseiro-93b81b.netlify.app/
-Youtube Video Link: 
+Youtube Video Link: https://youtu.be/t2m0Gwf5QTE
 Github Repo Link: https://github.com/lrpick8/COMP2537Assignment3
 
     Criteria	
