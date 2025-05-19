@@ -1,0 +1,115 @@
+body {
+  margin: 0px;
+  text-align: center;
+}
+
+#game_grid {
+  border: 2px tomato solid;
+  margin: 20px auto;
+  display: grid;
+  gap: 10px;
+  justify-content: center; 
+  align-content: center;   
+  width: fit-content;     
+}
+
+
+.card {
+  width: 100px;
+  aspect-ratio: 1 / 1;
+  perspective: 1000px;
+  position: relative;
+}
+
+.card-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+}
+
+.card-inner.flip {
+  transform: rotateY(180deg);
+}
+
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.front_face,
+.back_face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  top: 0;
+  left: 0;
+}
+
+
+.flip {
+  transform: rotateY(180deg);
+}
+
+.front_face {
+  transform: rotateY(180deg);
+}
+
+.back_face {
+  transform: rotateY(0deg);
+}
+
+#message {
+  text-align: center;
+  font-size: 2em;
+  color: green;
+  margin-top: 20px;
+}
+
+#message h2 {
+  animation: fade 2s ease-in-out infinite alternate;
+}
+
+@keyframes fade {
+  from { opacity: 0.5; }
+  to { opacity: 1; }
+}
+
+body.light {
+  background-color: white;
+  color: black;
+}
+
+body.dark {
+  background-color: #1e1e1e;
+  color: #f0f0f0;
+}
+
+.dark #game_grid {
+  border-color: #888;
+}
+
+.dark #message {
+  color: lightgreen;
+}
+
+.card {
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+button,
+select,
+label[for="theme"] {
+  cursor: pointer;
+}
+
+button, select {
+  font-size: 1rem;
+  border-radius: 5px;
+}
